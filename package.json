@@ -1,0 +1,55 @@
+{
+  "name": "brazilian-boundaries",
+  "version": "1.0.0",
+  "description": "Municipal boundaries of all Brazilian cities.",
+  "main": "index.js",
+  "keywords": [
+    "brazil",
+    "data",
+    "geojson",
+    "polygon",
+    "multipolygon",
+    "json",
+    "convert",
+    "geospatial",
+    "city",
+    "state"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ythecombinator/brazilian-boundaries.git"
+  },
+  "author": "matt (@ythecombinator)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ythecombinator/brazilian-boundaries/issues"
+  },
+  "homepage": "https://github.com/ythecombinator/brazilian-boundaries#readme",
+  "files": [
+    "files",
+    "README.md",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "lint": "eslint src update.js",
+    "test": "",
+    "update": "node --harmony-async-await fetch.js"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "eslint": "^3.6.1",
+    "eslint-cli": "^1.0.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.22.0",
+    "graceful-fs": "^4.1.11"
+  }
+}
