@@ -28,3 +28,15 @@ export const list = (cb) =>
     })
 
   })
+
+export const read = (path, cb) =>
+
+  new Promise((resolve, reject) => {
+
+    const done = fin(resolve, reject, cb)
+    fs.readFile(path, (err, d) => {
+      if (err) return done(err)
+      done(null, JSON.parse(d))
+    })
+    
+  }) 
