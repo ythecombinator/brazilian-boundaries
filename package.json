@@ -32,7 +32,7 @@
   ],
   "scripts": {
     "build": "babel src --out-dir .",
-    "lint": "eslint src update.js",
+    "lint": "eslint src fetch.js",
     "test": "",
     "update": "node --harmony-async-await fetch.js"
   },
