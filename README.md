@@ -46,6 +46,36 @@ There are three ways of using this data:
 
 ## API
 
+```js
+import { list, read } from 'brazilian-boundaries'
+
+const files = await list()
+
+files.forEach((filePath) => {
+  const boundary = await read(filePath)
+  // Your magic goes here...
+})
+```
+
+Let's say we want to get `geojson` data for the state of *Ceará*:
+
+```js
+import { read } from 'brazilian-boundaries'
+
+read('path/to/brazil-boundaries/repos/brazilian-boundaries/files/CE.json')
+    .then(
+        (data) =>
+           console.log(data))
+```
+
+If we test our console output on any `.geojson` linter–e.g. [geojson.io](http://geojson.io/)–we should get something like:
+
+<p align="center">
+  <a href="">
+    <img alt="Screenshot" src="screenshot.png" width="500px">
+  </a>
+</p>
+
 ### `list([cb])`
 
 Returns a promise which will handle an array of boundary file paths.
